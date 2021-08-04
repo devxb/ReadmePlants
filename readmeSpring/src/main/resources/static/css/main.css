@@ -1,0 +1,257 @@
+@CHARSET "UTF-8";
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+}
+
+navigater{
+    display : flex;
+    width : 100%;
+    justify-content : center;
+}
+
+p{
+    font-family : 'Noto Sans KR', sans-serif;
+    font-weight : 500;
+    font-size: 1em;
+}
+
+main{
+    width : 100%;
+    height : auto;
+    display : flex;
+    justify-content : center;
+}
+
+article{
+    width : 67.500em;
+    height : auto;
+}
+
+.navigater{
+    padding-left : 1em;
+    padding-right : 1em;
+    display : flex;
+    height : 3.750em;
+    width : 67.500em;
+    background-color : black;
+    align-items : center;
+    justify-content : space-between;
+}
+
+.navigaterItem{
+    display: flex;
+    align-items : center;
+    justify-content : space-between;
+    height : 100%;
+    width : 55%;
+}
+
+
+.removeA{ 
+    color : white;
+    text-decoration : none !important 
+} 
+.removeA:hover{ 
+    text-decoration : none !important 
+}
+
+
+.title{
+    color : white;
+}
+
+.forum{
+    color : white;
+}
+
+.about{    
+    color : white;
+}
+
+.custom{
+    color : white;
+}
+
+.user{
+    color : white;
+}
+
+.articleHeader{
+    width : 67.500em;
+    height : 29.000em;
+    display : flex;
+    align-items : space-between;
+}
+
+.tree{
+    width : 50%;
+    height : 100%;
+    display : flex;
+    justify-content : center;
+}
+
+.mainText{
+    width : 50%;
+    height : 100%;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+}
+
+.projectName{
+    font-family : "Noto Sans KR", sans-serif;
+    font-size : 2.813em;
+    color : white;
+    font-weight : 400;
+}
+
+.treeText{
+    font-family : "Noto Sans KR", sans-serif;
+    font-size : 2.188em;
+    color : #FF9D9D;
+    font-weight : 900;
+}
+
+.projectInfo{
+    font-family : "Noto Sans KR", sans-serif;
+    font-size : 1em;
+    color : white;
+    font-weight : 300;
+}
+
+.startButton{
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    background-color : white;
+    width : 13.750em;
+    height : 3.750em;
+    border-radius : 0.625em;
+}
+
+.startButtonText{
+    font-family : "Noto Sans KR", sans-serif;
+    font-size : 1em;
+    color : black;
+    font-weight : 900;
+}
+
+.startButton:hover{
+    background-color : #C9C9C9;
+}
+
+.forumButton{
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    background-color : #FF9D9D;
+    width : 13.750em;
+    height : 3.750em;
+    border-radius : 0.625em;
+}
+
+.forumButtonText{
+    font-family : "Noto Sans KR", sans-serif;
+    font-size : 1em;
+    color : black;
+    font-weight : 900;
+}
+
+.forumButton:hover{
+    background-color : #BE7979;
+}
+
+.articleMain{
+    width : 100%;
+    height : 25.000em;
+    display : flex;
+    align-items : center;
+}
+
+.projectGoal{
+    font-family : "Noto Sans KR", sans-serif;
+    font-weight : 500;
+    font-size : 1.563em;
+    color : white;
+}
+
+.projectGoalSub{
+    font-family : "Noto Sans KR", sans-serif;
+    font-weight : 500;
+    font-size : 1em;
+    color : white;
+}
+
+.projectTutorialText{
+    font-family : "Noto Sans KR", sans-serif;
+    font-weight : 500;
+    font-size : 1em;
+    color : white;
+}
+
+.Readme{
+    width : 50%;
+    height : 100%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+.articleSpecialThanks{
+    padding : 1em;
+    margin-top : 2.8em;
+    width : 100%;
+    height : 25.000em;
+    display : flex;
+    flex-direction : column;
+    justify-content : flex-start;
+    background-color : white;
+    border-top-right-radius : 10px;
+    border-top-left-radius : 10px;
+}
+
+.articleSpecialThanksText{
+    font-family : "Noto Sans KR", sans-serif;
+    font-weight : 700;
+    font-size : 1.563em;
+}
+
+.thankyou{
+    width : 100%;
+    height : 100%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+.footer{
+    padding : 1em;
+    width : 100%;
+    height : 1.750em;
+    display : flex;
+    justify-content : space-between;
+}
+
+.footerInfo{
+    align-items : center;
+    display : flex;
+    width : 50%;
+    justify-content : space-between;
+}
+
+.footerContact{
+    display : flex;
+    align-items : center;
+    justify-content : flex-end;
+    width : 50%;
+}
+
+
+.footerText{
+    font-family : "Noto Sans KR", sans-serif;
+    font-weight : 500;
+    font-size : 0.750em;
+    color : white;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="userInfo">
+    <insert id="insertTable" parameterType="UserInfo">
+        INSERT INTO userInfo(name, totalEXP, lastUpdate) 
+        VALUES(#{name}, #{totalEXP}, #{lastUpdate}) 
+        ON DUPLICATE KEY UPDATE totalEXP = #{totalEXP}, lastUpdate = #{lastUpdate}
+    </insert>
+    <select id="getUserInfo" parameterType="String" resultType="UserInfo">
+        SELECT * FROM userInfo WHERE name = #{name}
+    </select>
+</mapper>
