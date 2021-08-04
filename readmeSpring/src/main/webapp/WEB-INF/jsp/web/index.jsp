@@ -33,7 +33,7 @@
                         <span class = "projectInfo"> you can grow your plants on your </br>
                         github with github activity </span>
                         </br></br>
-                        <a href = "/maker" class = "removeA"> <div class = "startButton"> <span style = "font-size : 1em; font-weight : bold; color : black;"> Start </span> </div> </a>
+                        <a href = "/maker?name=Devxb&planet=yellowMoon&plant=blossomTree&nameTag=blackNameTag&ground=hill&background=black" class = "removeA"> <div class = "startButton"> <span style = "font-size : 1em; font-weight : bold; color : black;"> Start </span> </div> </a>
                         </br>
                         <a href = "/forum" class = "removeA"> <div class = "forumButton"> <span style = "font-size : 1em; font-weight : bold; color : black;"> Forum </span> </div> </a>
                     </div>

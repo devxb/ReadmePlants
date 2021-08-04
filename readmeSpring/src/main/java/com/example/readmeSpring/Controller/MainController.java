@@ -16,11 +16,13 @@ import com.example.readmeSpring.Controller.Satellite.GetSatellite;
 
 @Controller
 public class MainController{
+    
     @Autowired
     GetSatellite getSatellite;
     
     @GetMapping("/get")
-    public String drawPaintTest(Model model, User user){
+    public String draw(Model model, User user){
+        System.out.println(user.getBackground());
         getSatellite.runSatellite(model, user);
         if(user.getBackground().equals("none")) return "canvas";
         return "background";
@@ -41,10 +43,14 @@ public class MainController{
         return "web/index";
     }
     
-    @Autowired
-    
     @GetMapping("/maker")
-    public String maker(){
+    public String maker(Model model, User user){
+        model.addAttribute("name", user.getName());
+        model.addAttribute("nameTag", user.getNameTag());
+        model.addAttribute("planet", user.getPlanet());
+        model.addAttribute("plant", user.getPlant());
+        model.addAttribute("ground", user.getGround());
+        model.addAttribute("background", user.getBackground());
         return "web/maker";
     }
     

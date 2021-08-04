@@ -10,12 +10,12 @@
     <body>
         <navigater>
             <div class = "navigater">
-                <p class = "title"><a href="/" class="removeA"> Readme Plants </a></p>
+                <p class = "title"> <a href="/" class="removeA"> Readme Plants </a> </p>
                 <div class = "navigaterItem"> 
-                    <p class = "forum"> Forum </p>
-                    <p class = "about"> Custom Tree </p>
-                    <p class = "custom"> About </p>
-                    <p class = "user"> Login </p>
+                    <p class = "forum"> <a href="/forum" class="removeA"> Forum </a> </p>
+                    <p class = "about"> <a href="/forum?tag=Custom Tree" class="removeA"> Custom Tree </a> </p>
+                    <p class = "custom"> <a href="/about" class="removeA"> About </a> </p>
+                    <p class = "user"> <a href="/login" class="removeA"> Login </a> </p>
                 </div>
             </div>
         </navigater>

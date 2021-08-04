@@ -79,26 +79,41 @@ p{
 }
 
 .article{
-    margin-top:15vh;
+    margin-top:5vh;
     width : 100%;
     display : flex;
     justify-content : center;
     align-items : center;
+    flex-direction : column;
 }
 
 .maker{
-    width : 50%;
-    height : 30em;
-    min-width : 36.250em;
-    background-color : white;
+    width : 45%;
+    min-width : auto;
+    height : auto;
     border-radius : 0.625em;
     display : flex;
+    justify-content : center;
+    align-items : center;
+    flex-direction : column;  
+    border-radius : 0.625em;
+    background-color : white;
+    padding-top : 1em;
+}
+
+.makerWrapper{
+    width : auto;
+    height : auto;
+    padding-top : 1em;
+    padding-right : 2em;
+    display : flex;
     justify-content : space-around;
+    flex-direction : column;
 }
 
 .inputDiv{
-    width : 30%;
-    height : 100%;
+    width : 100%;
+    height : auto;
     padding : 1em;
     margin-top : -2em;
 }
@@ -174,112 +189,100 @@ select{
     flex-wrap : wrap;
 }
 
-.viewer{
-    width : 70%;
-    height : 100%;
-    flex-direction : row;
+.result{
+    display : flex;
+    justify-content : cetner;
+    align-items : center;
+    height : auto;
+    width : auto;
 }
 
-
-.viewerInner{
-    width : 100%;
-    height : 100%;
-    display : flex;
-    justify-content : flex-start;
-    align-items : center;
-    overflow-y: hidden;
-    overflow-x: scroll;
+.resultText{
+    font-family : "Noto Sans KR", sans-serif;
+    font-size : 1em;
+    text-align : center;
+    width : 70%;
+    word-break: break-all;
 }
 
 </style>
     <body style = "margin : 0px; padding : 0px; background-color : black; width : 100%;">
         <navigater>
             <div class = "navigater">
-                <p class = "title"><a href="/" class="removeA"> Readme Plants </a></p>
+                <p class = "title"> <a href="/" class="removeA"> Readme Plants </a> </p>
                 <div class = "navigaterItem"> 
-                    <p class = "forum"> Forum </p>
-                    <p class = "about"> Custom Tree </p>
-                    <p class = "custom"> About </p>
-                    <p class = "user"> Login </p>
+                    <p class = "forum"> <a href="/forum" class="removeA"> Forum </a> </p>
+                    <p class = "about"> <a href="/forum?tag=Custom Tree" class="removeA"> Custom Tree </a> </p>
+                    <p class = "custom"> <a href="/about" class="removeA"> About </a> </p>
+                    <p class = "user"> <a href="/login" class="removeA"> Login </a> </p>
                 </div>
             </div>
         </navigater>
         <div class = "article">
-            <div class = "maker">
-                <div class = "inputDiv">
-                    <form class = "inputForm">
-                        <span style = "width : 98%">
-                        <span class = "inputFormText"> Github name </span>
-                        </br>
-                        <input type = "text" name = "name">
-                        </span>
-                        <span class = "selectForm">
-                            <span style = "width : 49%">
-                                <label for = "nametags" class = "inputFormText"> nametags </label>
-                                </br>
-                                <select id = "nametags" name = "nametag">
-                                    <option selected> blackNameTag </option>
-                                </select>
+        
+            <div class ="maker">
+                <span class = "resultText" style="font-size : 1.2em; font-weight:700"> Copy and Paste below Link on your Readme! </span>
+                <span class = "resultText"> <a href = "/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background}" style="color : #4DC0CF;">![readmeplants](readmeplants/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background})</a> </span>
+                <br/>
+                <img src = "/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background}" style="object-fit : none"/>
+                <div class = "makerWrapper">
+                    <div class = "inputDiv">
+                        <form class = "inputForm">
+                            <span style = "width : 99%">
+                            <span class = "inputFormText"> Github name </span>
+                            </br>
+                            <input type = "text" name = "name" required>
                             </span>
-                            <span style = "width : 49%">
-                                <span for = "planets" class = "inputFormText"> planets </span>
-                                </br>
-                                <select id = "planets" name = "planet">
-                                    <option selected> yellowMoon </option>
-                                    <option> blueMoon </option>
-                                    <option> purpleMoon </option>
-                                    <option> sunset </option>
-                                    <option> eclipse </option>
-                                    <option> earth </option>
-                                </select>
+                            <span class = "selectForm">
+                                    <span style = "width : 49%">
+                                    <label for = "nametags" class = "inputFormText"> nametags </label>
+                                    </br>
+                                    <select id = "nametags" name = "nametag">
+                                        <option selected> blackNameTag </option>
+                                    </select>
+                                </span>
+                                <span style = "width : 49%">
+                                    <label for = "planets" class = "inputFormText"> planets </label>
+                                    </br>
+                                    <select id = "planets" name = "planet">
+                                        <option selected> yellowMoon </option>
+                                        <option> blueMoon </option>
+                                        <option> purpleMoon </option>
+                                        <option> sunset </option>
+                                        <option> eclipse </option>
+                                        <option> earth </option>
+                                    </select>
+                                </span>
+                                <span style = "width : 49%">
+                                    <label for = "plants" class = "inputFormText"> plants </label>
+                                    </br>
+                                    <select id = "plants" name = "plant">
+                                        <option selected> blossomTree </option>
+                                        <option> palmTree </option>
+                                        <option> pineTree </option>
+                                    </select>
+                                </span>
+                                <span style = "width : 49%">
+                                    <label for = "grounds" class = "inputFormText"> grounds </label>
+                                    </br>
+                                    <select id = "grounds" name = "ground">
+                                        <option selected> hill </option>
+                                    </select>
+                                </span>
+                                <span style = "width : 49%">
+                                    <label for = "backgrounds" class = "inputFormText"> backgrounds </label>
+                                    </br>
+                                    <select id = "backgrounds" name = "background">
+                                        <option selected> black </option>
+                                        <option> none </option>
+                                    </select>
+                                </span>
                             </span>
-                            <span style = "width : 49%">
-                                <label for = "plants" class = "inputFormText"> plants </label>
-                                </br>
-                                <select id = "plants" name = "plant">
-                                    <option selected> blossomTree </option>
-                                    <option> palmTree </option>
-                                    <option> pineTree </option>
-                                </select>
-                            </span>
-                            <span style = "width : 49%">
-                                <span id = "grounds" class = "inputFormText"> grounds </span>
-                                </br>
-                                <select for = "grounds" name = "ground">
-                                    <option selected> hill </option>
-                                </select>
-                            </span>
-                            <span style = "width : 49%">
-                                <span id = "grounds" class = "inputFormText"> backgrounds </span>
-                                </br>
-                                <select for = "background" name = "background">
-                                    <option selected> black </option>
-                                </select>
-                            </span>
-                        </span>
-                        <br>
-                        <div class = "submitDiv">
-                            <input class = "submit" type = "submit" value = "Get"/>
-                        </div>
-                    </form>
-                </div>
-                <div class = "viewer">
-                    <div class = "viewerInner">
-                        <div class = "LV1">
-                            <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree1&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
-                        </div>
-                        <div class = "LV2">
-                            <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree2&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
-                        </div>
-                        <div class = "LV3">
-                            <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree3&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
-                        </div>
-                        <div class = "LV4">
-                            <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree4&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
-                        </div>
-                        <div class = "LV5">
-                            <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree5&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
-                        </div>
+                            <br>
+                            <div class = "submitDiv">
+                                <input class = "submit" type = "submit" value = "Get"/>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

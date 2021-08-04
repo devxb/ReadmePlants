@@ -6,20 +6,19 @@ public abstract class RankSelectorTemplate implements RankSelector{
     
     @Override
     public String getRank(long EXP, Model model){
-        if(EXP <= 0) setEXP(model, (double)(0), 1);
+        if(EXP <= 0) setEXP(model, (double)(0), "1");
         long quarter = getQuarter();
         for(int i = 1; i <= 4; i++){
             if(EXP < i*quarter){
-                setEXP(model, (double)(152 * ((double)EXP / (double)(i * quarter))), i);
+                setEXP(model, (double)(152 * ((double)EXP / (double)(i * quarter))), ""+i);
                 return ""+i;
             }
         }
-        setEXP(model, 152, 5);
+        setEXP(model, 152, "Max");
         return "5";
     }
     
-    private void setEXP(Model model, double EXP, int LV){
-        System.out.println(EXP);
+    private void setEXP(Model model, double EXP, String LV){
         model.addAttribute("growBar", EXP);
         model.addAttribute("level", LV);
     }
