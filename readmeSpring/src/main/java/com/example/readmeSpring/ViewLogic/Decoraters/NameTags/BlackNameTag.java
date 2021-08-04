@@ -12,7 +12,7 @@ public class BlackNameTag extends PaintDecoraterTemplate{
     
     @Override
     public void painting(Model model){
-        model.addAttribute("nameTag", this.nameTag);
+        if(model.getAttribute("background").equals("none")) model.addAttribute("nameTag", this.nameTag);
     }
     
 }

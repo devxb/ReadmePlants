@@ -6,7 +6,7 @@
 
 <html>
     <head>
-        <title> readmePlants - maker </title>
+        <title> readme plants - maker </title>
     </head>
 <style>
 
@@ -185,7 +185,7 @@ select{
     width : 100%;
     height : 100%;
     display : flex;
-    justify-content : center;
+    justify-content : flex-start;
     align-items : center;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -217,14 +217,14 @@ select{
                             <span style = "width : 49%">
                                 <label for = "nametags" class = "inputFormText"> nametags </label>
                                 </br>
-                                <select id = "nametags" name = "plants">
+                                <select id = "nametags" name = "nametag">
                                     <option selected> blackNameTag </option>
                                 </select>
                             </span>
                             <span style = "width : 49%">
                                 <span for = "planets" class = "inputFormText"> planets </span>
                                 </br>
-                                <select id = "planets" name = "plants">
+                                <select id = "planets" name = "planet">
                                     <option selected> yellowMoon </option>
                                     <option> blueMoon </option>
                                     <option> purpleMoon </option>
@@ -236,7 +236,7 @@ select{
                             <span style = "width : 49%">
                                 <label for = "plants" class = "inputFormText"> plants </label>
                                 </br>
-                                <select id = "plants" name = "plants">
+                                <select id = "plants" name = "plant">
                                     <option selected> blossomTree </option>
                                     <option> palmTree </option>
                                     <option> pineTree </option>
@@ -245,8 +245,15 @@ select{
                             <span style = "width : 49%">
                                 <span id = "grounds" class = "inputFormText"> grounds </span>
                                 </br>
-                                <select for = "grounds" name = "plants">
+                                <select for = "grounds" name = "ground">
                                     <option selected> hill </option>
+                                </select>
+                            </span>
+                            <span style = "width : 49%">
+                                <span id = "grounds" class = "inputFormText"> backgrounds </span>
+                                </br>
+                                <select for = "background" name = "background">
+                                    <option selected> black </option>
                                 </select>
                             </span>
                         </span>
@@ -258,21 +265,21 @@ select{
                 </div>
                 <div class = "viewer">
                     <div class = "viewerInner">
-                    <div class = "LV1">
-                        <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree1&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
-                    </div>
-                    <div class = "LV2">
-                        <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree2&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
-                    </div>
-                    <div class = "LV3">
-                        <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree3&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
-                    </div>
-                    <div class = "LV4">
-                        <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree4&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
-                    </div>
-                    <div class = "LV5">
-                        <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree5&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
-                    </div>
+                        <div class = "LV1">
+                            <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree1&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
+                        </div>
+                        <div class = "LV2">
+                            <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree2&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
+                        </div>
+                        <div class = "LV3">
+                            <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree3&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
+                        </div>
+                        <div class = "LV4">
+                            <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree4&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
+                        </div>
+                        <div class = "LV5">
+                            <img src = "/canvasTest?name=Devxb&planet=yellowMoon&plant=blossomTree5&nameTag=blackNameTag&ground=hill" style = "object-fit:none">
+                        </div>
                     </div>
                 </div>
             </div>

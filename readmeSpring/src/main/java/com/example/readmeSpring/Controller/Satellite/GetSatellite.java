@@ -30,6 +30,7 @@ public class GetSatellite{
     
     public void runSatellite(Model model, User user){
         this.nameSetter(model, user);
+        model.addAttribute("background", user.getBackground());
         userProcessor.doProcess(model, user.getName());
         Queue<String> userQuery = userQueryGenerator.getUserQuery(user);
         PaintDecorater paintDecorater = decorateFactory.getPaintDecorater(userQuery);

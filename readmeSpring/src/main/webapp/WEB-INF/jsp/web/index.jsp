@@ -5,17 +5,17 @@
 <html>
     <head>
         <link href = "/resources/css/main.css" type = "text/css" rel = "stylesheet">
-        <title> readmePlants </title>
+        <title> readme plants </title>
     </head>
     <body style = "margin:0; padding:0; background-color:black">
         <navigater>
             <div class = "navigater">
-                <p class = "title"><a href="/" class="removeA"> Readme Plants </a></p>
+                <p class = "title"> <a href="/" class="removeA"> Readme Plants </a> </p>
                 <div class = "navigaterItem"> 
-                    <p class = "forum"> Forum </p>
-                    <p class = "about"> Custom Tree </p>
-                    <p class = "custom"> About </p>
-                    <p class = "user"> Login </p>
+                    <p class = "forum"> <a href="/forum" class="removeA"> Forum </a> </p>
+                    <p class = "about"> <a href="/forum?tag=Custom Tree" class="removeA"> Custom Tree </a> </p>
+                    <p class = "custom"> <a href="/about" class="removeA"> About </a> </p>
+                    <p class = "user"> <a href="/login" class="removeA"> Login </a> </p>
                 </div>
             </div>
         </navigater>
@@ -35,7 +35,7 @@
                         </br></br>
                         <a href = "/maker" class = "removeA"> <div class = "startButton"> <span style = "font-size : 1em; font-weight : bold; color : black;"> Start </span> </div> </a>
                         </br>
-                        <a href = "/" class = "removeA"> <div class = "forumButton"> <span style = "font-size : 1em; font-weight : bold; color : black;"> Forum </span> </div> </a>
+                        <a href = "/forum" class = "removeA"> <div class = "forumButton"> <span style = "font-size : 1em; font-weight : bold; color : black;"> Forum </span> </div> </a>
                     </div>
                 </div>
                 

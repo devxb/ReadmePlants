@@ -15,11 +15,11 @@
     }
     
     .canvas{
-        transform:translate(-50px, 0px);
+        transform:translate(-50px, -30px);
     }
     
     .readmeSpring{
-        transform:translate(160px, 17px);
+        transform:translate(160px, 22px);
         width:88px;
         height:26px;
         fill:white;
@@ -77,21 +77,21 @@
     }
     
     .projectInfoTitle{
-        transform:translate(160px, 190px);
+        transform:translate(160px, 180px);
         fill:white;
         font-size:20px;
         font-weight:700;
     }
     
     .projectInfo{
-        transform:translate(161px, 205px);
+        transform:translate(161px, 195px);
         fill:white;
         font-size:12px;
         font-weight:400;
     }
     ]]>
 </style>
-<rect width="316" height="239" rx="5" fill="black"/>
+<rect width="316" height="220" rx="5" fill="black"/>
 <g class = "canvas">
     <jsp:include page="./canvas.jsp"></jsp:include>
 </g>
@@ -99,7 +99,7 @@
 <text class="readmeSpring" text-anchor="start" alignment-baseline="middle"> README Spring</text>
 <text class="nameLarge" text-anchor="start" alignment-baseline="middle"> ${name} </text>
 <text class="level" text-anchor="start" alignment-baseline="middle"> Grow Level ${level} </text>
-<text class="expLarge" text-anchor="start" alignment-baseline="middle"> EXP : <fmt:formatNumber value="${EXP}" pattern="##,###,###"/> </text>
+<text class="expLarge" text-anchor="start" alignment-baseline="middle"> Github EXP : <fmt:formatNumber value="${EXP}" pattern="##,###,###"/> </text>
 <text class="levelBarTag" text-anchor="start" alignment-baseline="middle"> next level </text>
 <rect class="levelBar" width="152" height="9" rx="3" fill="white"/>
 <rect class="levelBarGrow" width="0" height="9" rx="3" fill="#3F9DE5">

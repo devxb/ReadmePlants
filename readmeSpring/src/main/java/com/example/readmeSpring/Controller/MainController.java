@@ -28,11 +28,11 @@ public class MainController{
     
     @GetMapping("/canvasTest")
     public String fixPosition(Model model, User user){
-        model.addAttribute("name", user.getName()+".jsp");
+        model.addAttribute("name", user.getName());
         model.addAttribute("nameTag", user.getNameTag()+".jsp");
         model.addAttribute("planetName", user.getPlanet()+".jsp");
-        model.addAttribute("plantName", user.getPlant()+"/"+user.getPlant()+".jsp");
-        model.addAttribute("groudnName", user.getGround()+".jsp");
+        model.addAttribute("plantName", user.getPlant().substring(0, user.getPlant().length()-1)+"/"+user.getPlant()+".jsp");
+        model.addAttribute("groundName", user.getGround()+".jsp");
         return "canvasTest";
     }
     
