@@ -18,7 +18,7 @@
     }
     
     .readmeSpring{
-        transform:translate(155px, 17px);
+        transform:translate(160px, 17px);
         width:88px;
         height:26px;
         fill:white;
@@ -27,7 +27,7 @@
     }
     
     .nameLarge{
-        transform:translate(155px, 50px);
+        transform:translate(160px, 50px);
         width:120px;
         height:50px;
         fill:white;
@@ -37,7 +37,7 @@
     }
     
     .level{
-        transform:translate(155px, 80px);
+        transform:translate(160px, 80px);
         width:100px;
         height:50px;
         fill:white;
@@ -47,7 +47,7 @@
     }
     
     .expLarge{
-        transform:translate(155px, 105px);
+        transform:translate(160px, 105px);
         width:100px;
         height:50px;
         fill:white;
@@ -57,7 +57,7 @@
     }
     
     .levelBarTag{
-        transform:translate(155px, 130px);
+        transform:translate(160px, 130px);
         width:100px;
         height:50px;
         fill:white;
@@ -67,11 +67,11 @@
     }
     
     .levelBar{
-        transform:translate(155px, 140px);
+        transform:translate(160px, 140px);
     }
     
     .levelBarGrow{
-        transform:translate(155px, 140px);
+        transform:translate(160px, 140px);
         overflow : hidden;
         animaiton: levelBarAnimation 3s forwards ease-in-out;
     }

@@ -7,7 +7,7 @@ public class User{
     private String nameTag = "blackNameTag";
     private String planet = "yellowMoon";
     private String plant = "blossomTree";
-    private String background = "none";
+    private String background = "black";
     
     public User(){}
     
