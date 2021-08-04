@@ -25,16 +25,15 @@
     .planetWhite{
         animation:planetAnimation 5s ease-out;
     }
-    
 </style>
 <g class="planet">
 <g filter="url(#eclipse1)">
-<g filter="url(#eclipse2)">
-    <circle cx="123" cy="83" r="50" fill="black"/>
+<g filter="url(#eclipse3)">
+    <circle cx="123" cy="83" r="50" fill="white"/>
 </g>
 <g class="planetWhite">
-    <g filter="url(#eclipse3)">
-    <circle cx="144" cy="87" r="50" fill="white"/>
+    <g filter="url(#eclipse2)">
+    <circle cx="144" cy="87" r="50" fill="black"/>
     </g>
 </g>
 </g>

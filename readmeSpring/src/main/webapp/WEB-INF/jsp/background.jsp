@@ -3,16 +3,17 @@
 
 <svg width="316" height="239" viewBox="0 0 316 239" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style>
-
-    @keyframes levelBarAnimation{
-        0%{
-            transform: scale(0,0);
-        }
-        100%{
-            transform: scale(1,1);
-        }
+    <![CDATA[
+    
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
     }
-
+    
+    text{
+        font-family: "Noto Sans KR", sans-serif;
+    }
+    
     .canvas{
         transform:translate(-50px, 0px);
     }
@@ -23,7 +24,7 @@
         height:26px;
         fill:white;
         font-size:12px;
-        font-weight:bold;
+        font-weight:400;
     }
     
     .nameLarge{
@@ -32,7 +33,7 @@
         height:50px;
         fill:white;
         font-size:20px;
-        font-weight:bold;
+        font-weight:700;
         overflow:hidden;
     }
     
@@ -42,7 +43,7 @@
         height:50px;
         fill:white;
         font-size:13px;
-        font-weight:bold;
+        font-weight:400;
         overflow:hidden;
     }
     
@@ -52,7 +53,7 @@
         height:50px;
         fill:white;
         font-size:13px;
-        font-weight:bold;
+        font-weight:400;
         overflow:hidden;
     }
     
@@ -62,7 +63,7 @@
         height:50px;
         fill:white;
         font-size:13px;
-        font-weight:bold;
+        font-weight:400;
         overflow:hidden;
     }
     
@@ -73,9 +74,22 @@
     .levelBarGrow{
         transform:translate(160px, 140px);
         overflow : hidden;
-        animaiton: levelBarAnimation 3s forwards ease-in-out;
     }
     
+    .projectInfoTitle{
+        transform:translate(160px, 190px);
+        fill:white;
+        font-size:20px;
+        font-weight:700;
+    }
+    
+    .projectInfo{
+        transform:translate(161px, 205px);
+        fill:white;
+        font-size:12px;
+        font-weight:400;
+    }
+    ]]>
 </style>
 <rect width="316" height="239" rx="5" fill="black"/>
 <g class = "canvas">
@@ -91,4 +105,6 @@
 <rect class="levelBarGrow" width="0" height="9" rx="3" fill="#3F9DE5">
     <animate attributeName="width" from="0" to="${growBar}" dur="3s" fill="freeze"/>
 </rect>
+<text class="projectInfoTitle"> Grow Plants </text>
+<text class="projectInfo"> with github activity </text>
 </svg>

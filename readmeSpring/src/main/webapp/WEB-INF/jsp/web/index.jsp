@@ -23,7 +23,7 @@
             <article>
                 <div class = "articleHeader">
                     <div class = "tree">
-                        <img src = "/get?user=Devxb&planet=yellowMoon&plant=blossomTree" style = "object-fit : none"/>
+                        <img src = "/get?user=Devxb&planet=yellowMoon&plant=blossomTree&background=none" style = "object-fit : none"/>
                     </div>
                     <div class = "mainText" style = "padding-left : 2em;">
                         <span class = "projectName"> Readme Plants</span>
@@ -31,7 +31,7 @@
                         <span class = "treeText"> Sakura </span> 
                         </br>
                         <span class = "projectInfo"> you can grow your plants on your </br>
-                        github with github contributions </span>
+                        github with github activity </span>
                         </br></br>
                         <a href = "/maker" class = "removeA"> <div class = "startButton"> <span style = "font-size : 1em; font-weight : bold; color : black;"> Start </span> </div> </a>
                         </br>
@@ -43,12 +43,12 @@
                     <div class = "mainText" style = "justify-content : flex-start; align-items : center">
                         <div>
                             <span class = "projectGoal"> Grow plants </span> </br>
-                            <span class = "projectGoalSub"> with Github <span style="color:#FF9D9D"> contributions </span> </span>
+                            <span class = "projectGoalSub"> with Github <span style="color:#FF9D9D"> activity </span> </span>
                             </br>
                             </br>
                             <span class = "projectTutorialText">
                                 You can get <span style="color:#FF9D9D"> EXP </span> through Github</br>
-                                Conributions counts (...1 Years)</br>
+                                activity (...1 Years)</br>
                                 </br>
                                 <span style="color:#FF9D9D"> EXP </span> is a nutrient that plants grow in.</br>
                                 </br>

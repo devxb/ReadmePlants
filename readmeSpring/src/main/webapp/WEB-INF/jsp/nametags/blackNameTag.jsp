@@ -4,6 +4,17 @@
 <svg width="264" height="264" viewBox="0 0 264 264" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 <style>
+    <![CDATA[
+    
+    @font-face {
+        font-family: 'Noto Sans KR';
+        src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    }
+    
+    text{
+        font-family : "Noto Sans KR";
+    }
+    
     .nameTag{
         transform : translate(50px, 0px);
     }
@@ -14,7 +25,7 @@
         height:29px;
         fill: white;
         font-size:12px;
-        font-weight:bold;
+        font-weight:400;
         overflow:hidden;
     }
     
@@ -24,9 +35,9 @@
         height: 29px;
         fill: white;
         font-size:11px;
-        font-weight:bold;
+        font-weight:400;
     }
-    
+    ]]>
 </style>
 <g class="nameTag">
 <g filter="url(#nameTag1)">
