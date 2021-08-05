@@ -7,7 +7,7 @@
         <link href = "/resources/css/error.css" type = "text/css" rel = "stylesheet">
         <title> readme plants - error </title>
     </head>
-    <body>
+    <body style = "margin:0; padding:0;">
         <navigater>
             <div class = "navigater">
                 <p class = "title"> <a href="/" class="removeA"> Readme Plants </a> </p>

@@ -22,19 +22,13 @@ public class MainController{
     
     @GetMapping("/get")
     public String draw(Model model, User user){
-        System.out.println(user.getBackground());
         getSatellite.runSatellite(model, user);
         if(user.getBackground().equals("none")) return "canvas";
         return "background";
     }
     
     @GetMapping("/canvasTest")
-    public String fixPosition(Model model, User user){
-        model.addAttribute("name", user.getName());
-        model.addAttribute("nameTag", user.getNameTag()+".jsp");
-        model.addAttribute("planetName", user.getPlanet()+".jsp");
-        model.addAttribute("plantName", user.getPlant().substring(0, user.getPlant().length()-1)+"/"+user.getPlant()+".jsp");
-        model.addAttribute("groundName", user.getGround()+".jsp");
+    public String fixPosition(){
         return "canvasTest";
     }
     

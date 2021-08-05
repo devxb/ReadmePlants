@@ -197,6 +197,18 @@ select{
     width : auto;
 }
 
+@keyframes resultTextAnimation{
+    0%{
+        color : #4DC0CF;
+    }
+    50%{
+        color : #CF4D4D;
+    }
+    100%{
+        color : #4DC0CF;
+    }
+}
+
 .resultText{
     font-family : "Noto Sans KR", sans-serif;
     font-size : 1em;
@@ -206,7 +218,7 @@ select{
 }
 
 </style>
-    <body style = "margin : 0px; padding : 0px; background-color : black; width : 100%;">
+    <body style = "margin:0; padding:0; background-color:black">
         <navigater>
             <div class = "navigater">
                 <p class = "title"> <a href="/" class="removeA"> Readme Plants </a> </p>
@@ -222,9 +234,10 @@ select{
         
             <div class ="maker">
                 <span class = "resultText" style="font-size : 1.2em; font-weight:700"> Copy and Paste below Link on your Readme! </span>
-                <span class = "resultText"> <a href = "/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background}" style="color : #4DC0CF;">![readmeplants](readmeplants/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background})</a> </span>
+                <span class = "resultText"> <a href = "/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background}" style="color : #4DC0CF; animation: resultTextAnimation 3s infinite;">![readmeplants](readmeplants/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background})</a> </span>
                 <br/>
                 <img src = "/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background}" style="object-fit : none"/>
+                <span class = "resultText" style="color : red"> ${notice} </span>
                 <div class = "makerWrapper">
                     <div class = "inputDiv">
                         <form class = "inputForm">
