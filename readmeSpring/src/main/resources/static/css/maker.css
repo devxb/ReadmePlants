@@ -1,0 +1,205 @@
+@CHARSET "UTF-8";
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+}
+
+navigater{
+    display : flex;
+    width : 100%;
+    justify-content : center;
+}
+
+p{
+    font-family : 'Noto Sans KR', sans-serif;
+    font-weight : 500;
+    font-size: 1em;
+}
+
+.navigater{
+    padding-left : 1em;
+    padding-right : 1em;
+    display : flex;
+    height : 3.750em;
+    width : 67.500em;
+    background-color : black;
+    align-items : center;
+    justify-content : space-between;
+}
+
+.navigaterItem{
+    display: flex;
+    align-items : center;
+    justify-content : space-between;
+    height : 100%;
+    width : 25%;
+}
+
+.removeA{ 
+    color : white;
+    text-decoration : none !important 
+} 
+.removeA:hover{ 
+    text-decoration : none !important 
+}
+
+
+.title{
+    color : white;
+}
+
+.forum{
+    color : white;
+}
+
+.about{    
+    color : white;
+}
+
+.custom{
+    color : white;
+}
+
+.user{
+    color : white;
+}
+
+.article{
+    margin-top:5vh;
+    width : 100%;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    flex-direction : column;
+}
+
+.maker{
+    width : 45%;
+    min-width : auto;
+    height : auto;
+    border-radius : 0.625em;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    flex-direction : column;  
+    border-radius : 0.625em;
+    background-color : white;
+    padding-top : 1em;
+}
+
+.makerWrapper{
+    width : auto;
+    height : auto;
+    padding-top : 1em;
+    padding-right : 2em;
+    display : flex;
+    justify-content : space-around;
+    flex-direction : column;
+}
+
+.inputDiv{
+    width : 100%;
+    height : auto;
+    padding : 1em;
+    margin-top : -2em;
+}
+
+.inputForm{
+    display : flex;
+    justify-content : center;
+    align-items : space-around;
+    flex-direction : column;
+    flex-wrap: wrap;
+    width : 100%;
+    height : 100%;
+}
+
+.inputFormText{
+    font-family : "Noto Sans KR", sans-serif;
+    font-weight : 700;
+    font-size : 0.8em;
+    color : black;
+}
+
+input{
+    width : 100%;
+    height : 2em;
+    background-color : white;
+    border-color : black;
+    border-radius : 0.3125em;
+}
+
+select{
+    width : 100%;
+    height : 2.35em;
+    background-color : white;
+    border-color : black;
+    border-radius : 0.3125em;  
+    border-width : 0.2em;
+    font-family : "Noto Sans KR", sans-serif;
+    font-weight : 700;
+    font-size : 0.8em;
+    color : #black;
+}
+
+.submitDiv{
+    width : 100%;
+    height : 2.8em;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+.submit{
+    width : 70%;
+    height : 100%;
+    background-color : #4DC0CF;
+    border : solid #4DC0CF;
+    border-radius = 0.625em;
+    font-family : "Noto Sans KR", sans-serif;
+    font-weight : 900;
+    font-size : 1em;
+    color : white;
+}
+
+.submit:hover{
+    background-color : #3FA0AC;
+    border : solid #3FA0AC;
+}
+
+.selectForm{
+    width : 100%;
+    height : auto;
+    display : flex;
+    justify-content : space-between;
+    flex-wrap : wrap;
+}
+
+.result{
+    display : flex;
+    justify-content : cetner;
+    align-items : center;
+    height : auto;
+    width : auto;
+}
+
+@keyframes resultTextAnimation{
+    0%{
+        color : #4DC0CF;
+    }
+    50%{
+        color : #CF4D4D;
+    }
+    100%{
+        color : #4DC0CF;
+    }
+}
+
+.resultText{
+    font-family : "Noto Sans KR", sans-serif;
+    font-size : 1em;
+    text-align : center;
+    width : 70%;
+    word-break: break-all;
+}

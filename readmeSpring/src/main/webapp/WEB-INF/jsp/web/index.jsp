@@ -12,10 +12,10 @@
             <div class = "navigater">
                 <p class = "title"> <a href="/" class="removeA"> Readme Plants </a> </p>
                 <div class = "navigaterItem"> 
-                    <p class = "forum"> <a href="/forum" class="removeA"> Forum </a> </p>
-                    <p class = "about"> <a href="/forum?tag=Custom Tree" class="removeA"> Custom Tree </a> </p>
+                    <!-- <p class = "forum"> <a href="/forum" class="removeA"> Forum </a> </p> -->
+                    <p class = "about"> <a href="/forum?tag=Custom Tree" class="removeA"> CustomTree </a> </p>
                     <p class = "custom"> <a href="/about" class="removeA"> About </a> </p>
-                    <p class = "user"> <a href="/login" class="removeA"> Login </a> </p>
+                    <!-- <p class = "user"> <a href="/login" class="removeA"> Login </a> </p> -->
                 </div>
             </div>
         </navigater>
@@ -35,7 +35,7 @@
                         </br></br>
                         <a href = "/maker?name=Devxb&planet=yellowMoon&plant=blossomTree&nameTag=blackNameTag&ground=hill&background=black" class = "removeA"> <div class = "startButton"> <span style = "font-size : 1em; font-weight : bold; color : black;"> Start </span> </div> </a>
                         </br>
-                        <a href = "/forum" class = "removeA"> <div class = "forumButton"> <span style = "font-size : 1em; font-weight : bold; color : black;"> Forum </span> </div> </a>
+                        <a href = "/forum" class = "removeA"> <div class = "forumButton"> <span style = "font-size : 1em; font-weight : bold; color : black;"> Custom tree </span> </div> </a>
                     </div>
                 </div>
                 
