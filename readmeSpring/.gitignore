@@ -3,7 +3,7 @@ HELP.md
 .class
 TokenStorage.java
 .gradle
-application.properties
+src/main/resources/application.properties
 build/
 SSL/
 !gradle/wrapper/gradle-wrapper.jar
