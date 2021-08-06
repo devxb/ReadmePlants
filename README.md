@@ -102,8 +102,8 @@
 
 <h2></h2>
 <h3 id="license"> 라이센스 </h3>
-<a href="/"> 라이센스 링크 </a>
-
+<a href="/LICENSE"> 코드 라이센스 </a>
+<a href="/LICENSEDESIGN.md"> 디자인 라이센스 </a>
 <h2></h2>
 <h3 id="error">오류</h3>
 
