@@ -9,6 +9,11 @@
 <h4> 깃허브 활동으로 식물을 키우세요 </h4>
 
 <img src = "http://readmeplants.com/resources/svgfiles/grow.svg" style="object-fit:contain"/>
+
+<p>오류제보 및, 연락 : <i>develxb@gmail.com</i></p>
+
+<p><a href="http://readmeplants.com">프로젝트 홈페이지</a></p>
+
 </div>
 
 <ul>
@@ -27,6 +32,9 @@
 <li>
 <a href="#license">라이센스</a>
 </li>
+<li>
+<a href="#error">오류</a>
+</li>
 </ul>
 <h2></h2>
 
@@ -40,7 +48,7 @@
 <h4 id="maker"> maker </h4>
 아래 <a href="http://readmeplants.com/maker?name=Devxb&planet=yellowMoon&plant=blossomTree&nameTag=blackNameTag&ground=hill&background=black">버튼</a>을 클릭하세요
 <br>
-<a href="http://readmeplants.com/maker?name=Devxb&planet=yellowMoon&plant=blossomTree&nameTag=blackNameTag&ground=hill&background=black"><img src="readmeplants.com/resources/svgfiles/makeButton.svg"></img></a>
+<a href="http://readmeplants.com/maker?name=Devxb&planet=yellowMoon&plant=blossomTree&nameTag=blackNameTag&ground=hill&background=black"><img src="http://readmeplants.com/resources/svgfiles/makeButton.svg"></img></a>
 
 <h4 id="makewithoutmaker">make without maker</h4>
 6개의 쿼리가 있으며, 모두 입력할 필요는 없습니다.(입력하지 않을시 기본 세팅으로 설정됨)
@@ -63,7 +71,7 @@
 
 1. 백그라운드 없는 버전
 
-```
+```html
 <a href = "https://github.com/devxb/ReadmePlants">
 
  <img src = "http://readmeplants.com/get?name=Devxb&plant=blossomTree&planet=eclipse&background=none"/>
@@ -78,7 +86,7 @@
 
 2. 백그라운드 있는버전
 
-```
+```html
 <a href = "https://github.com/devxb/ReadmePlants">
 
  <img src = "http://readmeplants.com/get?name=Devxb&plant=blossomTree&planet=eclipse&background=black"/>
@@ -95,3 +103,13 @@
 <h2></h2>
 <h3 id="license"> 라이센스 </h3>
 <a href="/"> 라이센스 링크 </a>
+
+<h2></h2>
+<h3 id="error">오류</h3>
+
+애니메이션이 초기 1회만 적용되는 오류
+- github camo에 캐시가 남아있어서 생기는 오류로 보임
+```
+ctrl+F5 (크롬기준)
+```
+위 명령어를 입력하면 애니메이션 다시 볼수있음
