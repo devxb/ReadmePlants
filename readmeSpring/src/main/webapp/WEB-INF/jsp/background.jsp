@@ -96,7 +96,7 @@
     <jsp:include page="./canvas.jsp"></jsp:include>
 </g>
 
-<text class="readmeSpring" text-anchor="start" alignment-baseline="middle"> README Spring</text>
+<text class="readmeSpring" text-anchor="start" alignment-baseline="middle"> README plants</text>
 <text class="nameLarge" text-anchor="start" alignment-baseline="middle"> ${name} </text>
 <text class="level" text-anchor="start" alignment-baseline="middle"> Grow Level ${level} </text>
 <text class="expLarge" text-anchor="start" alignment-baseline="middle"> Github EXP : <fmt:formatNumber value="${EXP}" pattern="##,###,###"/> </text>
