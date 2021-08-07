@@ -1,8 +1,8 @@
 
 <div align="center">
-    <img src = "http://readmeplants.com/resources/svgfiles/projectNameLogo.svg&v1" style="object-fit:none"/>
+    <img src = "http://readmeplants.com/resources/svgfiles/projectNameLogo.svg" style="object-fit:none"/>
     <br><br>
-    <img src = "http://readmeplants.com/get?name=Devxb&planet=blueMoon?v1" style="object-fit:none"/>
+    <img src = "http://readmeplants.com/get?name=Devxb&planet=blueMoon&v1" style="object-fit:none"/>
 </div>
 <h2></h2>
 
