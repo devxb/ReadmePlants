@@ -140,7 +140,7 @@ select{
     font-family : "Noto Sans KR", sans-serif;
     font-weight : 700;
     font-size : 0.8em;
-    color : #black;
+    color : black;
 }
 
 .submitDiv{
@@ -156,7 +156,7 @@ select{
     height : 100%;
     background-color : #4DC0CF;
     border : solid #4DC0CF;
-    border-radius = 0.625em;
+    border-radius : 0.625em;
     font-family : "Noto Sans KR", sans-serif;
     font-weight : 900;
     font-size : 1em;

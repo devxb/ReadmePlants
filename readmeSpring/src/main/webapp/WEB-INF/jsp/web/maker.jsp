@@ -31,7 +31,7 @@
                 <span class = "resultText" style="color : red"> ${notice} </span>
                 <div class = "makerWrapper">
                     <div class = "inputDiv">
-                        <form class = "inputForm">
+                        <form class = "inputForm" accpet-charset = "UTF-8">
                             <span style = "width : 99%">
                             <span class = "inputFormText"> Github name </span>
                             </br>

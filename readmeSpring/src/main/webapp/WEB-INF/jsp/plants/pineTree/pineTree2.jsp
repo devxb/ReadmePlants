@@ -20,7 +20,7 @@
 <filter id="pineTree1" x="0.80542" y="0.890625" width="21.564" height="29.7552" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur"/>
+<feGaussianBlur stdDeviation="0" result="effect1_foregroundBlur"/>
 </filter>
 </defs>
 </svg>

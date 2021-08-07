@@ -410,7 +410,7 @@
 <filter id="blossomTree2" x="5.98828" y="5.73535" width="138.256" height="102.265" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur"/>
+<feGaussianBlur stdDeviation="0" result="effect1_foregroundBlur"/>
 </filter>
 <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(89 22) rotate(90) scale(15)">
 <stop stop-color="#FF9E9E"/>

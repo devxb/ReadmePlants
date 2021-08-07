@@ -48,4 +48,10 @@ public class MainController{
         return "web/maker";
     }
     
+    @GetMapping("/secure")
+    public String httpsRedirect(Model model){
+        model.addAttribute("secureAccept", "true");
+        return "web/secure/warn";
+    }
+    
 }

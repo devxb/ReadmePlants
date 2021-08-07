@@ -26,12 +26,12 @@
 </style>
 
 <g class="planet">
-<g filter="url(#filter0_df)">
-<circle cx="123" cy="83" r="50" fill="url(#paint0_radial)"/>
+<g filter="url(#yellowMoon2)">
+<circle cx="123" cy="83" r="50" fill="url(#yellowMoon1)"/>
 </g>
 </g>
 <defs>
-<filter id="filter0_df" x="0" y="0" width="246" height="246" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="yellowMoon2" x="0" y="0" width="246" height="246" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 <feMorphology radius="3" operator="dilate" in="SourceAlpha" result="effect1_dropShadow"/>
@@ -43,7 +43,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
 <feGaussianBlur stdDeviation="7.5" result="effect2_foregroundBlur"/>
 </filter>
-<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(98 66.5) rotate(31.7989) scale(88.2454)">
+<radialGradient id="yellowMoon1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(98 66.5) rotate(31.7989) scale(88.2454)">
 <stop stop-color="#F9E02D"/>
 <stop offset="1" stop-color="#F4EA71"/>
 </radialGradient>

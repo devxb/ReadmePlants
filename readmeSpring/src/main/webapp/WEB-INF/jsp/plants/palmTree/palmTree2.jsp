@@ -46,7 +46,7 @@
 <filter id="palmTree1" x="2.11719" y="0.880371" width="41.2681" height="51.1196" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur"/>
+<feGaussianBlur stdDeviation="0" result="effect1_foregroundBlur"/>
 </filter>
 </defs>
 </svg>
