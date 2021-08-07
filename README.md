@@ -45,14 +45,15 @@
 
 <p>
 여러가지 식물과, 배경을 제공합니다. 
-<br> (추천)maker를 선택를 이용하거나, 링크에 쿼리를 입력해서 자신의 식물을 만드세요
+<br> (추천)maker를 이용하거나, 링크에 쿼리를 입력해서 자신의 식물을 만드세요
 </p>
 
 <h4 id="maker"> maker </h4>
 아래 <a href="http://readmeplants.com/maker?name=Devxb&planet=yellowMoon&plant=blossomTree&nameTag=blackNameTag&ground=hill&background=black">버튼</a>을 클릭하세요
 <br>
+<div align = "center">
 <a href="http://readmeplants.com/maker?name=Devxb&planet=yellowMoon&plant=blossomTree&nameTag=blackNameTag&ground=hill&background=black"><img src="http://readmeplants.com/resources/svgfiles/makeButton.svg?v1"></img></a>
-
+</div>
 <h4 id="makewithoutmaker">make without maker</h4>
 6개의 쿼리가 있으며, 모두 입력할 필요는 없습니다.(입력하지 않을시 기본 세팅으로 설정됨)
 
