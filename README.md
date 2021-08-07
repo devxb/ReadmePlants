@@ -14,6 +14,8 @@
 
 <p><a href="http://readmeplants.com">프로젝트 홈페이지</a></p>
 
+<p>⭐스타를 눌러주세요 개발에 큰 도움이 됩니다! :)</p>
+    
 </div>
 
 <ul>
