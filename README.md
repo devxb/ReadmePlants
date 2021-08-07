@@ -1,6 +1,6 @@
 
 <div align="center">
-    <h3> Readme Plants </h3>
+    <img src = "http://readmeplants.com/resources/svgfiles/projectNameLogo.svg" style="object-fit:none"/>
     <img src = "http://readmeplants.com/get?name=Devxb&planet=blueMoon" style="object-fit:none"/>
 </div>
 <h2></h2>
