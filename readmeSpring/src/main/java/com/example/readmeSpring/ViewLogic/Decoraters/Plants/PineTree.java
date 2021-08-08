@@ -15,7 +15,7 @@ import com.example.readmeSpring.RankLogic.RankSelector;
 public class PineTree extends PaintDecoraterTemplate{
     
     @Autowired
-    @Qualifier("easy")
+    @Qualifier("veryEasy")
     private RankSelector rankSelector;
     private String plantName = "pineTree/pineTree";
 

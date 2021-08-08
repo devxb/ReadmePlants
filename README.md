@@ -9,6 +9,9 @@
 <div align="center">
 <h4> 깃허브 활동으로 식물을 키우세요 </h4>
 
+<p> 각각의 식물들은 모두 성장시키는데 필요한 난이도가 존재합니다. </p>
+
+<p> 식물들을 성장시키는데 필요한 난이도는 maker에서 확인하세요. </p>
 <img src = "http://readmeplants.com/resources/svgfiles/grow.svg?v2" style="object-fit:contain"/>
 
 <p>오류제보 및, 연락 : <i>develxb@gmail.com</i></p>

@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component;
 public class VeryEasy extends RankSelectorTemplate{
     
     /*
-        1000000
-        / 4 = 250000
+        200000
+        / 4 = 50000
     */
     
     @Override
     public long getQuarter(){
-        return 250000;
+        return 50000;
     }
     
 }

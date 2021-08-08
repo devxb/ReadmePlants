@@ -19,6 +19,7 @@ public abstract class RankSelectorTemplate implements RankSelector{
     }
     
     private void setEXP(Model model, double EXP, String LV){
+        /*model.addAttribute("rank", this.getClass().getSimpleName());*/
         model.addAttribute("growBar", EXP);
         model.addAttribute("level", LV);
     }

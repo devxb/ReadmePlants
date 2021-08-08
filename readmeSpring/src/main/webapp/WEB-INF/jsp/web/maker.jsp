@@ -25,9 +25,14 @@
         
             <div class ="maker">
                 <span class = "resultText" style="font-size : 1.2em; font-weight:700"> Copy and Paste below Link on your Readme! </span>
-                <span class = "resultText"> <a href = "/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background}" style="color : #4DC0CF; animation: resultTextAnimation 3s infinite;">![readmeplants](readmeplants/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background})</a> </span>
+                <span class = "resultText"> 
+                    <a href = "/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background}" style="color : #4DC0CF; animation: resultTextAnimation 3s infinite;">
+                        [![readmeplants](http://readmeplants.com/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background})](https://github.com/devxb/readmeplants)
+                    </a>
+                </span>
                 <br/>
                 <img src = "/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background}" style="object-fit : none"/>
+                <!--<span class = "resultText" style = "font-size : 1.2em; font-weight : 700; color : gray"> Grow Rank : "${rank}" </span>-->
                 <span class = "resultText" style="color : red"> ${notice} </span>
                 <div class = "makerWrapper">
                     <div class = "inputDiv">
