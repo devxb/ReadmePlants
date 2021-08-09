@@ -13,6 +13,6 @@ public class APIReceiverTest{
     
     @Test
     public void 데이터_파싱_성공확인(){
-        System.out.println(this.apiReceiver.getTotalContributions("Devxb"));
+        //System.out.println(this.apiReceiver.getTotalContributions("Devxb"));
     }
 }

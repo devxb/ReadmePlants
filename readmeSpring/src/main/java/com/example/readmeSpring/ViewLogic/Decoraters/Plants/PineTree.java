@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
-import com.example.readmeSpring.RankLogic.Easy;
+import com.example.readmeSpring.RankLogic.VeryEasy;
 import com.example.readmeSpring.RankLogic.RankSelector;
 
 @Component

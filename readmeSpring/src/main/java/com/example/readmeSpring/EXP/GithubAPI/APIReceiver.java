@@ -7,12 +7,14 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
 
 import org.springframework.stereotype.Component;
 import org.springframework.context.annotation.Scope;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
@@ -25,27 +27,48 @@ public class APIReceiver{
     @Autowired
     private DateGenerator dateGenerator;
     
-    public long getTotalContributions(String userName){
-        long totalContributions = 0;
+    public HashMap<String, Long> getUserGithubData(String userName){
+        HashMap<String, Long> ret = new HashMap<String, Long>();
         JSONParser parser = null;
         Object obj = null;
         try{
             parser = new JSONParser();
             obj = parser.parse(getJSONData(userName));
         } catch (ParseException PE){
-            return -500;
+            return errorMap();
         }
         JSONObject Jobj = (JSONObject)obj;
         try{
             Jobj = (JSONObject)Jobj.get("data");
-            Jobj = (JSONObject)Jobj.get("user");
-            Jobj = (JSONObject)Jobj.get("contributionsCollection");
-            Jobj = (JSONObject)Jobj.get("contributionCalendar");
-            totalContributions = (long)Jobj.get("totalContributions");
+            parseContribution((JSONObject)Jobj.get("user"));
+            parseStargazer((JSONObject)Jobj.get("user"));
+            ret.put("totalContributions", parseContribution((JSONObject)Jobj.get("user")));
+            ret.put("totalStargazer", parseStargazer((JSONObject)Jobj.get("user")));
         } catch (NullPointerException NPE){
-            return -404;
+            return errorMap();
         }
-        return totalContributions;
+        return ret;
+    }
+    
+    private HashMap<String, Long> errorMap(){
+        HashMap<String, Long> err = new HashMap<String, Long>();
+        err.put("totalContributions", new Long(-5));
+        err.put("totalStargazer", new Long(-5));
+        return err;
+    }
+    
+    private Long parseContribution(JSONObject Cobj){
+        Cobj = (JSONObject)Cobj.get("contributionsCollection");
+        Cobj = (JSONObject)Cobj.get("contributionCalendar");
+        return new Long((long)Cobj.get("totalContributions"));
+    }
+    
+    private Long parseStargazer(JSONObject Sobj){
+        long ret = 0;
+        Sobj = (JSONObject)Sobj.get("repositories");
+        JSONArray SArray = (JSONArray)Sobj.get("nodes");
+        for(int i = 0; i < SArray.size(); i++) ret += (long)((JSONObject)SArray.get(i)).get("stargazerCount");
+        return new Long(ret);
     }
     
     private String getJSONData(String userName){
@@ -71,7 +94,7 @@ public class APIReceiver{
         httpURLConnection.setDoOutput(true);
         
         String query = "{\n";
-        query += "\"query\" : \"query($login: String!, $to: DateTime){ rateLimit{cost remaining limit nodeCount} user(login:$login){ name contributionsCollection(to:$to){ contributionCalendar{ totalContributions } } } }\", ";
+        query += "\"query\" : \"query($login: String!, $to: DateTime){ rateLimit{cost remaining limit nodeCount} user(login:$login){ name repositories(first:100){ nodes{ stargazerCount } } contributionsCollection(to:$to){ contributionCalendar{ totalContributions } } } }\", ";
         query += "\"variables\" : {\"login\" : " + "\"" + userName + "\"," + "\"to\" : " + "\"" + dateGenerator.getServerDate() + "T00:00:00Z\"" + "}\n";
         query += "}\n";
         

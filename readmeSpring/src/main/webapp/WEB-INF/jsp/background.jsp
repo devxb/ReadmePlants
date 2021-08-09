@@ -37,9 +37,19 @@
         overflow:hidden;
     }
     
-    .level{
-        transform:translate(160px, 80px);
-        width:100px;
+    .totalStargazer{
+        transform:translate(160px, 75px);
+        width:120px;
+        height:50px;
+        fill:white;
+        font-size:13px;
+        font-weight:400;
+        overflow:hidden;
+    }
+    
+    .totalContributions{
+        transform:translate(160px, 91px);
+        width:120px;
         height:50px;
         fill:white;
         font-size:13px;
@@ -48,7 +58,7 @@
     }
     
     .expLarge{
-        transform:translate(160px, 105px);
+        transform:translate(160px, 108px);
         width:100px;
         height:50px;
         fill:white;
@@ -57,7 +67,7 @@
         overflow:hidden;
     }
     
-    .levelBarTag{
+    .level{
         transform:translate(160px, 130px);
         width:100px;
         height:50px;
@@ -66,7 +76,7 @@
         font-weight:400;
         overflow:hidden;
     }
-    
+
     .levelBar{
         transform:translate(160px, 140px);
     }
@@ -98,9 +108,10 @@
 
 <text class="readmeSpring" text-anchor="start" alignment-baseline="middle"> README plants</text>
 <text class="nameLarge" text-anchor="start" alignment-baseline="middle"> ${name} </text>
+<text class="totalContributions" text-anchor="start" alignment-baseline="middle"> Contribution : ${totalContributions} </text>
+<text class="totalStargazer" text-anchor="start" alignment-baseline="middle"> Star : ${totalStargazer} </text>
 <text class="level" text-anchor="start" alignment-baseline="middle"> Grow Level ${level} </text>
 <text class="expLarge" text-anchor="start" alignment-baseline="middle"> Github EXP : <fmt:formatNumber value="${EXP}" pattern="##,###,###"/> </text>
-<text class="levelBarTag" text-anchor="start" alignment-baseline="middle"> next level </text>
 <rect class="levelBar" width="152" height="9" rx="3" fill="white"/>
 <rect class="levelBarGrow" width="0" height="9" rx="3" fill="#3F9DE5">
     <animate attributeName="width" from="0" to="${growBar}" dur="3s" fill="freeze"/>

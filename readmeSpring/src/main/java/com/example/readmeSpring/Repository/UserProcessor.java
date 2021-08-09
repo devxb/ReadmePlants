@@ -1,5 +1,7 @@
 package com.example.readmeSpring.Repository;
 
+import java.util.HashMap;
+
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -22,9 +24,11 @@ public class UserProcessor{
     DataBase mysqlDataBase;
     
     public void doProcess(Model model, String userName){
-        UserInfo userInfo = new UserInfo(userName, -1, dateGenerator.getServerDate());
-        if(checkDataBase(userInfo)) updateUser(userInfo);
+        UserInfo userInfo = new UserInfo(userName, -1, dateGenerator.getServerDate(), 0, 0);
+        if(checkDataBase(userInfo)) updateUser(userInfo, model);
         model.addAttribute("EXP", userInfo.getTotalEXP());
+        model.addAttribute("totalContributions", userInfo.getTotalContributions());
+        model.addAttribute("totalStargazer", userInfo.getTotalStargazer());
     }
     
     // same = false
@@ -32,13 +36,21 @@ public class UserProcessor{
     private boolean checkDataBase(UserInfo userInfo){
         UserInfo getUser = this.mysqlDataBase.getUserInfo(userInfo.getName());
         if(getUser == null) return true;
-        userInfo.setTotalEXP(getUser.getTotalEXP());
+        userInfo = userInfoSetter(userInfo, getUser.getTotalEXP(), getUser.getTotalContributions(), getUser.getTotalStargazer());
         return !(getUser.getLastUpdate().equals(userInfo.getLastUpdate()));
     }
     
-    private void updateUser(UserInfo userInfo){
-        userInfo.setTotalEXP(this.exp.getEXP(userInfo.getName()));
+    private void updateUser(UserInfo userInfo, Model model){
+        HashMap<String, Long> userGithubData = exp.getEXP(userInfo.getName());
+        userInfo = userInfoSetter(userInfo, userGithubData.get("totalEXP"), userGithubData.get("totalContributions"), userGithubData.get("totalStargazer"));
         this.mysqlDataBase.insertTable(userInfo);
+    }
+    
+    private UserInfo userInfoSetter(UserInfo userInfo, long totalEXP, long totalContributions, long totalStargazer){
+        userInfo.setTotalEXP(totalEXP);
+        userInfo.setTotalContributions(totalContributions);
+        userInfo.setTotalStargazer(totalStargazer);
+        return userInfo;
     }
     
 }

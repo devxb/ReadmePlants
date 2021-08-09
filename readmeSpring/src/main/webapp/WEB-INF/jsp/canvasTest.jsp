@@ -2,7 +2,7 @@
 
 <svg width="246" height="246" viewBox="0 0 246 246" fill="none" xmlns="http://www.w3.org/2000/svg">
     <jsp:include page="./planets/yellowMoon.jsp"/>
-    <jsp:include page="./plants/pineTree/pineTree5.jsp"/>
+    <jsp:include page="./plants/wolfTree/wolfTree5.jsp"/>
     <jsp:include page="./grounds/hill.jsp"/>
     <jsp:include page="./nametags/blackNameTag.jsp"/>
 </svg>
