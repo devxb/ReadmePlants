@@ -15,9 +15,6 @@ import com.example.readmeSpring.ViewLogic.DecorateFactory.DecorateFactory;
 import com.example.readmeSpring.Repository.User.User;
 import com.example.readmeSpring.Controller.Satellite.GetSatellite;
 
-jurlring
-JH9892
-
 @Controller
 public class MainController{
     
