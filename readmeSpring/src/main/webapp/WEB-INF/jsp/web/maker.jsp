@@ -69,6 +69,7 @@
                                         <option selected> blossomTree </option>
                                         <option> palmTree </option>
                                         <option> pineTree </option>
+                                        <option> rainbowTree </option>
                                     </select>
                                 </span>
                                 <span style = "width : 49%">

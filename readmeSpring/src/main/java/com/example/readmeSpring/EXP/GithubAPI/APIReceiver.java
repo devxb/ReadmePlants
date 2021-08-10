@@ -5,6 +5,7 @@ import com.example.readmeSpring.DateGenerator;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
@@ -52,8 +53,8 @@ public class APIReceiver{
     
     private HashMap<String, Long> errorMap(){
         HashMap<String, Long> err = new HashMap<String, Long>();
-        err.put("totalContributions", new Long(-5));
-        err.put("totalStargazer", new Long(-5));
+        err.put("totalContributions", new Long(-404));
+        err.put("totalStargazer", new Long(-404));
         return err;
     }
     
@@ -74,14 +75,18 @@ public class APIReceiver{
     private String getJSONData(String userName){
         String ret = "ERR";
         HttpURLConnection httpURLConnection = null;
-        BufferedReader br = null;
         try{
             httpURLConnection = this.connectGithub(userName);
-            br = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream(), "utf-8"));
+        }catch(Exception E){
+            E.printStackTrace();
+        }
+        
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream(), "utf-8"))){
             ret = br.readLine();
-            br.close();
-            httpURLConnection.disconnect();
-        }catch(Exception E){}
+        }catch(Exception E){
+            E.printStackTrace();
+        }
+        httpURLConnection.disconnect();
         return ret;
     }
     
@@ -98,9 +103,11 @@ public class APIReceiver{
         query += "\"variables\" : {\"login\" : " + "\"" + userName + "\"," + "\"to\" : " + "\"" + dateGenerator.getServerDate() + "T00:00:00Z\"" + "}\n";
         query += "}\n";
         
-        OutputStream setQuery = httpURLConnection.getOutputStream();
-        setQuery.write(query.getBytes("utf-8"));
-        setQuery.close();
+        try(OutputStream setQuery = httpURLConnection.getOutputStream()){
+            setQuery.write(query.getBytes("utf-8"));
+        } catch (IOException IOE){
+            IOE.printStackTrace();
+        }
         
         return httpURLConnection;
     }

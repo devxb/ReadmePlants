@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
+import javax.servlet.http.HttpServletResponse;
 
 import com.example.readmeSpring.ViewLogic.Decoraters.*;
 import com.example.readmeSpring.ViewLogic.DecorateFactory.DecorateFactory;
 import com.example.readmeSpring.Repository.User.User;
 import com.example.readmeSpring.Controller.Satellite.GetSatellite;
+
+jurlring
+JH9892
 
 @Controller
 public class MainController{
@@ -21,8 +25,10 @@ public class MainController{
     GetSatellite getSatellite;
     
     @GetMapping("/get")
-    public String draw(Model model, User user){
+    public String draw(HttpServletResponse httpResponse, Model model, User user){
         getSatellite.runSatellite(model, user);
+        httpResponse.setHeader("Cache-Control", "max-age=10800");
+        httpResponse.setHeader("Connection", "close"); 
         if(user.getBackground().equals("none")) return "canvas";
         return "background";
     }
