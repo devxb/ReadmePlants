@@ -19,7 +19,7 @@ import com.example.readmeSpring.Controller.Satellite.GetSatellite;
 public class MainController{
     
     @Autowired
-    GetSatellite getSatellite;
+    private GetSatellite getSatellite;
     
     @GetMapping("/get")
     public String draw(HttpServletResponse httpResponse, Model model, User user){
@@ -49,12 +49,6 @@ public class MainController{
         model.addAttribute("ground", user.getGround());
         model.addAttribute("background", user.getBackground());
         return "web/maker";
-    }
-    
-    @GetMapping("/secure")
-    public String httpsRedirect(Model model){
-        model.addAttribute("secureAccept", "true");
-        return "web/secure/warn";
     }
     
 }

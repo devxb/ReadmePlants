@@ -30,11 +30,11 @@ public class MysqlDataBaseTest{
     @Test
     public void DB연결_저장_추출_확인(){
         
-        UserInfo userInfo = new UserInfo("Devxb", exp.getEXP("Devxb"), this.dateGenerator.getServerDate());
-        mysqlDataBase.insertTable(userInfo);
+        // UserInfo userInfo = new UserInfo("Devxb", exp.getEXP("Devxb"), this.dateGenerator.getServerDate());
+        // mysqlDataBase.insertTable(userInfo);
         
-        UserInfo result = mysqlDataBase.getUserInfo("Devxb");
+        // UserInfo result = mysqlDataBase.getUserInfo("Devxb");
         
-        System.out.println(result.getName() + " " + result.getTotalEXP() + " " + result.getLastUpdate());
+        // System.out.println(result.getName() + " " + result.getTotalEXP() + " " + result.getLastUpdate());
     }
 }

@@ -17,16 +17,16 @@ import java.util.Queue;
 public class GetSatellite{
     
     @Autowired
-    DecorateFactory decorateFactory;
+    private DecorateFactory decorateFactory;
     
     @Autowired
-    UserQueryGenerator userQueryGenerator;
+    private UserQueryGenerator userQueryGenerator;
     
     @Autowired
-    UserProcessor userProcessor;
+    private UserProcessor userProcessor;
     
     @Autowired
-    NameOptimizer nameOptimizer;
+    private NameOptimizer nameOptimizer;
     
     public void runSatellite(Model model, User user){
         this.nameSetter(model, user);

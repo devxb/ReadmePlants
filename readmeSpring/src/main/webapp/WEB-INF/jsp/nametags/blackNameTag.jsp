@@ -44,7 +44,7 @@
 <rect x="1" y="1" width="151" height="29" rx="5" fill="black"/>
 </g>
     <text class="name" text-anchor="middle" alignment-baseline="middle">"${name}"</text>
-    <text class="exp" text-anchor="middle" alignment-baseline="middle">Github EXP : <fmt:formatNumber value="${EXP}" pattern="##,###,###"/> </text>
+    <text class="exp" text-anchor="middle" alignment-baseline="middle">EXP : <fmt:formatNumber value="${EXP}" pattern="##,###,###"/> </text>
 </g>
 <defs>
 <filter id="nameTag1" x="0" y="0" width="153" height="31" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

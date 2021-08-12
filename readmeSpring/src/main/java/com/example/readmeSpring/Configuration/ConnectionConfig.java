@@ -22,7 +22,7 @@ public class ConnectionConfig {
                 SecurityConstraint securityConstraint = new SecurityConstraint();
                 SecurityCollection collection = new SecurityCollection();
                 securityConstraint.setUserConstraint("CONFIDENTIAL");
-                collection.addPattern("/secure/web");
+                collection.addPattern("/secure/*");
                 securityConstraint.addCollection(collection);
                 context.addConstraint(securityConstraint);
             }

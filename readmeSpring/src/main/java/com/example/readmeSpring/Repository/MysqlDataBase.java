@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 public class MysqlDataBase implements DataBase{
     
     @Autowired
-    SqlSession sqlSession;
+    private SqlSession sqlSession;
     
     @Override
     public void insertTable(UserInfo userInfo){

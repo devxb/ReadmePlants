@@ -45,6 +45,7 @@ public class APIReceiver{
             parseStargazer((JSONObject)Jobj.get("user"));
             ret.put("totalContributions", parseContribution((JSONObject)Jobj.get("user")));
             ret.put("totalStargazer", parseStargazer((JSONObject)Jobj.get("user")));
+            ret.put("totalFollower", parseFollowers((JSONObject)Jobj.get("user")));
         } catch (NullPointerException NPE){
             return errorMap();
         }
@@ -55,6 +56,7 @@ public class APIReceiver{
         HashMap<String, Long> err = new HashMap<String, Long>();
         err.put("totalContributions", new Long(-404));
         err.put("totalStargazer", new Long(-404));
+        err.put("totalFollower", new Long(-404));
         return err;
     }
     
@@ -62,6 +64,11 @@ public class APIReceiver{
         Cobj = (JSONObject)Cobj.get("contributionsCollection");
         Cobj = (JSONObject)Cobj.get("contributionCalendar");
         return new Long((long)Cobj.get("totalContributions"));
+    }
+    
+    private Long parseFollowers(JSONObject Fobj){
+        Fobj = (JSONObject)Fobj.get("followers");
+        return new Long((long)Fobj.get("totalCount"));
     }
     
     private Long parseStargazer(JSONObject Sobj){
@@ -99,7 +106,7 @@ public class APIReceiver{
         httpURLConnection.setDoOutput(true);
         
         String query = "{\n";
-        query += "\"query\" : \"query($login: String!, $to: DateTime){ rateLimit{cost remaining limit nodeCount} user(login:$login){ name repositories(first:100){ nodes{ stargazerCount } } contributionsCollection(to:$to){ contributionCalendar{ totalContributions } } } }\", ";
+        query += "\"query\" : \"query($login: String!, $to: DateTime){ rateLimit{cost remaining limit nodeCount} user(login:$login){ name followers{ totalCount } repositories(first:100){ nodes{ stargazerCount } } contributionsCollection(to:$to){ contributionCalendar{ totalContributions } } } }\", ";
         query += "\"variables\" : {\"login\" : " + "\"" + userName + "\"," + "\"to\" : " + "\"" + dateGenerator.getServerDate() + "T00:00:00Z\"" + "}\n";
         query += "}\n";
         

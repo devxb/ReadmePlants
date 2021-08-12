@@ -5,6 +5,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+
 @SpringBootTest
 public class APIReceiverTest{
     
@@ -13,6 +15,9 @@ public class APIReceiverTest{
     
     @Test
     public void 데이터_파싱_성공확인(){
-        //System.out.println(this.apiReceiver.getTotalContributions("Devxb"));
+        HashMap<String, Long> ret = this.apiReceiver.getUserGithubData("Devxb");
+        System.out.println(ret.get("totalContributions"));
+        System.out.println(ret.get("totalStargazer"));
+        System.out.println(ret.get("totalFollowers"));
     }
 }

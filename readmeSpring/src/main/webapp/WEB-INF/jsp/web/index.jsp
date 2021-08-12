@@ -7,15 +7,15 @@
         <link href = "/resources/css/main.css" type = "text/css" rel = "stylesheet">
         <title> readme plants </title>
     </head>
-    <body style = "margin:0; padding:0; background-color:black">
+    <body style = "margin:0; padding:0; background-color:black; min-margin-left: 0px;">
         <navigater>
             <div class = "navigater">
                 <p class = "title"> <a href="/" class="removeA"> Readme Plants </a> </p>
                 <div class = "navigaterItem"> 
                     <!-- <p class = "forum"> <a href="/forum" class="removeA"> Forum </a> </p> -->
-                    <p class = "about"> <a href="/forum?tag=Custom Tree" class="removeA"> CustomTree </a> </p>
-                    <p class = "custom"> <a href="/about" class="removeA"> About </a> </p>
-                    <!-- <p class = "user"> <a href="/login" class="removeA"> Login </a> </p> -->
+                    <p class = "about"> <a href="/about" class="removeA"> About </a> </p>
+                    <p class = "custom"> <a href="/secure/customTree" class="removeA"> Custom Tree </a> </p>
+                    <p class = "user"> <a href="/secure/login" class="removeA"> Login </a> </p>
                 </div>
             </div>
         </navigater>

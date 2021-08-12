@@ -5,9 +5,9 @@
         
 <mapper namespace="userInfo">
     <insert id="insertTable" parameterType="UserInfo">
-        INSERT INTO userInfo(name, totalEXP, lastUpdate, totalContributions, totalStargazer) 
-        VALUES(#{name}, #{totalEXP}, #{lastUpdate}, #{totalContributions}, #{totalStargazer}) 
-        ON DUPLICATE KEY UPDATE totalEXP = #{totalEXP}, lastUpdate = #{lastUpdate}, totalContributions = #{totalContributions}, totalStargazer = #{totalStargazer}
+        INSERT INTO userInfo(name, totalEXP, lastUpdate, totalContributions, totalStargazer, totalFollower) 
+        VALUES(#{name}, #{totalEXP}, #{lastUpdate}, #{totalContributions}, #{totalStargazer}, #{totalFollower}) 
+        ON DUPLICATE KEY UPDATE totalEXP = #{totalEXP}, lastUpdate = #{lastUpdate}, totalContributions = #{totalContributions}, totalStargazer = #{totalStargazer}, totalFollower = #{totalFollower}
     </insert>
     <select id="getUserInfo" parameterType="String" resultType="UserInfo">
         SELECT * FROM userInfo WHERE name = #{name}

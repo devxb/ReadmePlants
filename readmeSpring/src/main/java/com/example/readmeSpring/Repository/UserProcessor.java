@@ -14,21 +14,22 @@ import com.example.readmeSpring.EXP.EXP;
 public class UserProcessor{
     
     @Autowired
-    DateGenerator dateGenerator;
+    private DateGenerator dateGenerator;
     
     @Autowired
-    EXP exp;
+    private EXP exp;
     
     @Autowired
     @Qualifier("mysqlDataBase")
-    DataBase mysqlDataBase;
+    private DataBase mysqlDataBase;
     
     public void doProcess(Model model, String userName){
-        UserInfo userInfo = new UserInfo(userName, -1, dateGenerator.getServerDate(), 0, 0);
+        UserInfo userInfo = new UserInfo(userName, -1, dateGenerator.getServerDate(), 0, 0, 0);
         if(checkDataBase(userInfo)) updateUser(userInfo, model);
         model.addAttribute("EXP", userInfo.getTotalEXP());
         model.addAttribute("totalContributions", userInfo.getTotalContributions());
         model.addAttribute("totalStargazer", userInfo.getTotalStargazer());
+        model.addAttribute("totalFollower", userInfo.getTotalFollower());
     }
     
     // same = false
@@ -36,20 +37,21 @@ public class UserProcessor{
     private boolean checkDataBase(UserInfo userInfo){
         UserInfo getUser = this.mysqlDataBase.getUserInfo(userInfo.getName());
         if(getUser == null) return true;
-        userInfo = userInfoSetter(userInfo, getUser.getTotalEXP(), getUser.getTotalContributions(), getUser.getTotalStargazer());
+        userInfo = userInfoSetter(userInfo, getUser.getTotalEXP(), getUser.getTotalContributions(), getUser.getTotalStargazer(), getUser.getTotalFollower());
         return !(getUser.getLastUpdate().equals(userInfo.getLastUpdate()));
     }
     
     private void updateUser(UserInfo userInfo, Model model){
         HashMap<String, Long> userGithubData = exp.getEXP(userInfo.getName());
-        userInfo = userInfoSetter(userInfo, userGithubData.get("totalEXP"), userGithubData.get("totalContributions"), userGithubData.get("totalStargazer"));
+        userInfo = userInfoSetter(userInfo, userGithubData.get("totalEXP"), userGithubData.get("totalContributions"), userGithubData.get("totalStargazer"), userGithubData.get("totalFollower"));
         this.mysqlDataBase.insertTable(userInfo);
     }
     
-    private UserInfo userInfoSetter(UserInfo userInfo, long totalEXP, long totalContributions, long totalStargazer){
+    private UserInfo userInfoSetter(UserInfo userInfo, long totalEXP, long totalContributions, long totalStargazer, long totalFollower){
         userInfo.setTotalEXP(totalEXP);
         userInfo.setTotalContributions(totalContributions);
         userInfo.setTotalStargazer(totalStargazer);
+        userInfo.setTotalFollower(totalFollower);
         return userInfo;
     }
     

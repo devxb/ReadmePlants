@@ -14,10 +14,14 @@ public class EXP{
     private APIReceiver apiReceiver;
     private final static long contributionEXP = 9876;
     private final static long starEXP = 19876;
+    private final static long followerEXP = 13457;
     
     public HashMap<String, Long> getEXP(String userName){
         HashMap<String, Long> userGithubData = apiReceiver.getUserGithubData(userName);
-        userGithubData.put("totalEXP",Math.min(99999999, userGithubData.get("totalContributions") * contributionEXP + userGithubData.get("totalStargazer") * starEXP));
+        userGithubData.put("totalEXP",Math.min(999999999, userGithubData.get("totalContributions") * contributionEXP
+        + userGithubData.get("totalStargazer") * starEXP
+        + followerEXP * userGithubData.get("totalFollower")
+        ));
         return userGithubData;
     }
     

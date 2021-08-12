@@ -2,17 +2,14 @@
 <div align="center">
     <img src = "http://readmeplants.com/resources/svgfiles/projectNameLogo.svg" style="object-fit:none"/>
     <br><br>
-    <img src = "http://readmeplants.com/get?name=Devxb&planet=sunset&v3" style="object-fit:none"/>
+    <img src = "http://readmeplants.com/get?name=Devxb&planet=sunset&v9" style="object-fit:none"/>
 </div>
 <h2></h2>
 
 <div align="center">
 <h4> 깃허브 활동으로 식물을 키우세요 </h4>
 
-<img src = "http://readmeplants.com/resources/svgfiles/grow.svg?v3" style="object-fit:contain"/>
-
-<p> 각 태그들 설명 </p>
-<img src =  "https://user-images.githubusercontent.com/62425964/128665717-ccce35f8-7722-4c77-80ac-8df1fbbab291.png" style="object-fit:contain"/>
+<img src = "http://readmeplants.com/resources/svgfiles/grow.svg?v9" style="object-fit:contain"/>
 
 <p>오류제보 및, 연락 : <i>develxb@gmail.com</i></p>
 
@@ -55,7 +52,7 @@
 아래 <a href="http://readmeplants.com/maker?name=Devxb&planet=yellowMoon&plant=blossomTree&nameTag=blackNameTag&ground=hill&background=black">버튼</a>을 클릭하세요
 <br>
 <div align = "center">
-<a href="http://readmeplants.com/maker?name=Devxb&planet=yellowMoon&plant=blossomTree&nameTag=blackNameTag&ground=hill&background=black"><img src="http://readmeplants.com/resources/svgfiles/makeButton.svg?v3"></img></a>
+<a href="http://readmeplants.com/maker?name=Devxb&planet=yellowMoon&plant=blossomTree&nameTag=blackNameTag&ground=hill&background=black"><img src="http://readmeplants.com/resources/svgfiles/makeButton.svg?v9"></img></a>
 </div>
 <h4 id="makewithoutmaker">make without maker</h4>
 6개의 쿼리가 있으며, 모두 입력할 필요는 없습니다.(입력하지 않을시 기본 세팅으로 설정됨)
@@ -87,7 +84,7 @@
 ```
 <a href = "https://github.com/devxb/ReadmePlants">
 
- <img src = "http://readmeplants.com/get?name=Devxb&plant=blossomTree&planet=sunset&background=none?v3"/>
+ <img src = "http://readmeplants.com/get?name=Devxb&plant=blossomTree&planet=sunset&background=none?v9"/>
 
 </a>
 
@@ -103,7 +100,7 @@
 
 <a href = "https://github.com/devxb/ReadmePlants">
 
- <img src = "http://readmeplants.com/get?name=Devxb&plant=blossomTree&planet=eclipse&background=black?v3"/>
+ <img src = "http://readmeplants.com/get?name=Devxb&plant=blossomTree&planet=eclipse&background=black?v9"/>
 
 </a>
 

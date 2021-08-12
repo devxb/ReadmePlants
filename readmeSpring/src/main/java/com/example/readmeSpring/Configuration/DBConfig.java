@@ -19,7 +19,7 @@ import javax.sql.DataSource;
 public class DBConfig{
     
     @Autowired
-    ApplicationContext applicationContext;
+    private ApplicationContext applicationContext;
     
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource.hikari")
