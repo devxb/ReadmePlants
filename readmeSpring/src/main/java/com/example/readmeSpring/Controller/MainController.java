@@ -25,7 +25,8 @@ public class MainController{
     public String draw(HttpServletResponse httpResponse, Model model, User user){
         getSatellite.runSatellite(model, user);
         httpResponse.setHeader("Cache-Control", "max-age=10800");
-        httpResponse.setHeader("Connection", "close"); 
+        httpResponse.setHeader("Connection", "keep-alive");
+        httpResponse.setHeader("keep-alive", "time-out=10, max=5");
         if(user.getBackground().equals("none")) return "canvas";
         return "background";
     }
