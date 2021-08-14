@@ -15,9 +15,9 @@
                 <p class = "title"> <a href="/" class="removeA"> Readme Plants </a> </p>
                 <div class = "navigaterItem"> 
                     <!-- <p class = "forum"> <a href="/forum" class="removeA"> Forum </a> </p> -->
-                    <p class = "about"> <a href="/secure?page=customTree" class="removeA"> CustomTree </a> </p>
-                    <p class = "custom"> <a href="/about" class="removeA"> About </a> </p>
-                    <p class = "user"> <a href="/secure?page=login" class="removeA"> Login </a> </p>
+                    <p class = "about"> <a href="/about" class="removeA"> About </a> </p>
+                    <p class = "custom"> <a href="https://github.com/devxb/readmeplants" class="removeA"> Github </a> </p>
+                    <p class = "user"> <a href="/donate" class="removeA"> Donate </a> </p>
                 </div>
             </div>
         </navigater>
@@ -27,7 +27,7 @@
                 <span class = "resultText" style="font-size : 1.2em; font-weight:700"> Copy and Paste below Link on your Readme! </span>
                 <span class = "resultText"> 
                     <a href = "/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background}" style="color : #4DC0CF; animation: resultTextAnimation 3s infinite;">
-                        [![readmeplants](http://readmeplants.com/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background})](https://github.com/devxb/readmeplants)
+                        [![readmeplants](https://readmeplants.com/get?name=${name}&planet=${planet}&plant=${plant}&nameTag=${nameTag}&ground=${ground}&background=${background})](https://github.com/devxb/readmeplants)
                     </a>
                 </span>
                 <br/>
