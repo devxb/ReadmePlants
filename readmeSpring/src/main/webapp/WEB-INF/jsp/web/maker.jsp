@@ -15,7 +15,7 @@
                 <p class = "title"> <a href="/" class="removeA"> Readme Plants </a> </p>
                 <div class = "navigaterItem"> 
                     <!-- <p class = "forum"> <a href="/forum" class="removeA"> Forum </a> </p> -->
-                    <p class = "about"> <a href="/about" class="removeA"> About </a> </p>
+                    <p class = "about"> <a href="https://github.com/devxb/readmeplants/about-project.md" class="removeA"> About </a> </p>
                     <p class = "custom"> <a href="https://github.com/devxb/readmeplants" class="removeA"> Github </a> </p>
                     <p class = "user"> <a href="/donate" class="removeA"> Donate </a> </p>
                 </div>
