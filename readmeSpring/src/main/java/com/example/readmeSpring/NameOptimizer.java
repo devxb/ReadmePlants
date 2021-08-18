@@ -14,4 +14,11 @@ public class NameOptimizer{
         return ret;
     }
     
+    public String cropString(String name, int idx){
+        if(name.length()-1 == idx) return name;
+        String ret = "";
+        for(int i = 0; i <= idx-2; i++) ret += name.charAt(i);
+        return ret + "..";
+    }
+    
 }

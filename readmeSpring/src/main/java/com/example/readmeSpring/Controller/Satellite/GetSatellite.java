@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 
 import com.example.readmeSpring.NameOptimizer;
+import com.example.readmeSpring.NameLengthCalculator;
 import com.example.readmeSpring.Repository.User.User;
 import com.example.readmeSpring.Repository.User.UserQueryGenerator;
 import com.example.readmeSpring.Repository.UserProcessor;
@@ -28,6 +29,9 @@ public class GetSatellite{
     @Autowired
     private NameOptimizer nameOptimizer;
     
+    @Autowired
+    private NameLengthCalculator nameLengthCalculator;
+    
     public void runSatellite(Model model, User user){
         this.nameSetter(model, user);
         model.addAttribute("background", user.getBackground());
@@ -39,7 +43,8 @@ public class GetSatellite{
     }
     
     private void nameSetter(Model model, User user){
-        model.addAttribute("name", user.getName());
+        if(user.getBackground() != "none") model.addAttribute("name", nameOptimizer.cropString(user.getName(), nameLengthCalculator.getLargeNameLength(user.getName())));
+        else model.addAttribute("name", user.getName());
         user.setName(nameOptimizer.optimze(user.getName()));
     }
     

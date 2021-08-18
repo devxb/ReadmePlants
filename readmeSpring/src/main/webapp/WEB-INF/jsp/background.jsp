@@ -29,7 +29,7 @@
     
     .nameLarge{
         transform:translate(160px, 50px);
-        width:120px;
+        width:130px;
         height:50px;
         fill:white;
         font-size:20px;
